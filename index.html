@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resumable Upload Client Code</title>
+    <script src="https://unpkg.com/spark-md5@^3.0.0/spark-md5.min.js"></script>
+    <!--<script src="node_modules/spark-md5/spark-md5.min.js"></script>-->
+    <script src="resumableUpload.js"></script>
+</head>
+<body>
+<h1>Resumable Upload Client Code</h1>
+URL: <input type="url" id="urlInput" value="http://example.com/"/>
+<br>
+<input type="file" id="fileInput" />
+<br>
+Position in file to start: <input type="number" id="startPosInput" min="0" step="10000" value="100000" list="defaultNumbers">
+<datalist id="defaultNumbers">
+    <option value="0">
+    <option value="10000">
+    <option value="100000">
+    <option value="1000000">
+    <option value="10000000">
+    <option value="1000000000">
+</datalist>
+<p>Use the network tab of the debugger to see that the request only contains the last part of the file.</p>
+
+<p>Use the same host (default URL) to see the `X-Content-Range` and `X-MD5` headers.</p>
+
+<p>Request will fail unless server accepts cross-origin posts to the URL.</p>
+<br>
+</body>
+</html>

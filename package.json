@@ -1,0 +1,23 @@
+{
+  "name": "resumableupload",
+  "version": "0.1.0",
+  "description": "sends remaining part of file, with MD5 of whole",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DougReeder/ResumableUpload.git"
+  },
+  "keywords": [
+    "file",
+    "stream",
+    "resumable",
+    "upload"
+  ],
+  "author": "Doug Reeder <reeder.29@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "spark-md5": "^3.0.0"
+  }
+}
